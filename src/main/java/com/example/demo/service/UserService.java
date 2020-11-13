@@ -1,17 +1,13 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Cart;
-import com.example.demo.model.Role;
 import com.example.demo.model.Status;
 import com.example.demo.model.User;
-import com.example.demo.repository.CartRepository;
-import com.example.demo.repository.RoleRepository;
 import com.example.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.security.SecureRandom;
 import java.util.*;
 
 @Service
@@ -32,12 +28,7 @@ public class UserService {
     public User registerUser(User user){
         user.setStatus(Status.ACTIVE);
         user.addRole(roleService.findByName("ROLE_USER"));
-        //securing the user
-        SecureRandom random = new SecureRandom();
-        byte[] salt = new byte[16];
-        random.nextBytes(salt);
-        user.setSalt(Base64.getEncoder().encodeToString(salt));
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword().concat(user.getSalt())));
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
         Cart cart = new Cart();
         cartService.save(cart);

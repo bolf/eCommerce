@@ -27,9 +27,6 @@ public class User extends BaseModel {
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	@Column(nullable = false)
 	private String password;
-	@JsonIgnore
-	@Column(nullable = false)
-	private String salt;
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "user_role",
@@ -48,14 +45,6 @@ public class User extends BaseModel {
 	}
 
 	public User(){}
-
-	public String getSalt() {
-		return salt;
-	}
-
-	public void setSalt(String salt) {
-		this.salt = salt;
-	}
 
 	public String getPassword() {
 		return password;
