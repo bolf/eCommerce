@@ -34,6 +34,12 @@ public class UserOrder extends BaseModel{
 	@Column
 	private BigDecimal total;
 
+	public UserOrder(){}
+
+	public UserOrder(User user) {
+		this.user = user;
+	}
+
 	public List<Item> getItems() {
 		return items;
 	}

@@ -30,7 +30,16 @@ public class Cart extends BaseModel{
 	@Column
 	@JsonProperty
 	private BigDecimal total;
-	
+
+	public Cart(ArrayList<Item> items, BigDecimal total, User user) {
+		this.items = items;
+		this.total = total;
+		this.user = user;
+	}
+
+	public Cart() {
+	}
+
 	public BigDecimal getTotal() {
 		return total;
 	}

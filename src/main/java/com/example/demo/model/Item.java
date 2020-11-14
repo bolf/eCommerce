@@ -25,7 +25,12 @@ public class Item extends BaseModel {
 	@Column(nullable = false)
 	@JsonProperty
 	private String description;
-	
+
+	public Item(String name, BigDecimal price) {
+		this.name = name;
+		this.price = price;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

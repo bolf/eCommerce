@@ -41,7 +41,8 @@ public class UserController {
 			return ResponseEntity.badRequest().build();
 		}
 		User user = new User(createUserRequest.getUsername(),createUserRequest.getPassword());
-		return ResponseEntity.ok(userService.registerUser(user));
+		userService.registerUser(user);
+		return ResponseEntity.ok(user);
 	}
 	
 }

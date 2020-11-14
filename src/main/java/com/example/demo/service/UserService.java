@@ -27,7 +27,7 @@ public class UserService {
 
     public User registerUser(User user){
         user.setStatus(Status.ACTIVE);
-        user.addRole(roleService.findByName("ROLE_USER"));
+        user.addRole(roleService.findByName("USER"));
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
         Cart cart = new Cart();
