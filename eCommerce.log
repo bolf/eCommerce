@@ -1,0 +1,87 @@
+2020-11-18 18:17:05,909 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:50] Starting ECommerceApp on dbn with PID 9697 (started by blf in /media/blf/65D23EBD6F17EA05/IdeaWorkspace/javaWebDeveloper10_2020/Security_DevOps/P04-eCommerce Application)
+2020-11-18 18:17:05,914 DEBUG [main] c.e.d.ECommerceApp [StartupInfoLogger.java:53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2020-11-18 18:17:05,917 INFO [main] c.e.d.ECommerceApp [SpringApplication.java:675] No active profile set, falling back to default profiles: default
+2020-11-18 18:17:18,017 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:59] Started ECommerceApp in 13.971 seconds (JVM running for 16.149)
+2020-11-18 18:17:38,159 ERROR [http-nio-8080-exec-2] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:123
+2020-11-18 19:50:50,862 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:50] Starting ECommerceApp on dbn with PID 11374 (started by blf in /media/blf/65D23EBD6F17EA05/IdeaWorkspace/javaWebDeveloper10_2020/Security_DevOps/P04-eCommerce Application)
+2020-11-18 19:50:50,882 DEBUG [main] c.e.d.ECommerceApp [StartupInfoLogger.java:53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2020-11-18 19:50:50,885 INFO [main] c.e.d.ECommerceApp [SpringApplication.java:675] No active profile set, falling back to default profiles: default
+2020-11-18 19:51:03,135 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:59] Started ECommerceApp in 14.096 seconds (JVM running for 15.895)
+2020-11-18 20:08:25,189 ERROR [http-nio-8080-exec-1] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:123
+2020-11-18 20:08:26,410 ERROR [http-nio-8080-exec-2] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:123
+2020-11-18 20:08:27,214 ERROR [http-nio-8080-exec-6] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:123
+2020-11-18 20:08:27,992 ERROR [http-nio-8080-exec-8] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:123
+2020-11-18 20:08:28,403 ERROR [http-nio-8080-exec-10] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:123
+2020-11-18 20:08:32,945 ERROR [http-nio-8080-exec-1] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:258
+2020-11-18 20:08:33,445 ERROR [http-nio-8080-exec-2] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:258
+2020-11-18 20:11:01,759 ERROR [http-nio-8080-exec-10] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:111111258
+2020-11-18 20:11:48,006 INFO [http-nio-8080-exec-1] c.e.d.c.UserController [UserController.java:56] user created: test_user
+2020-11-18 20:12:05,928 INFO [http-nio-8080-exec-3] c.e.d.c.UserController [UserController.java:56] user created: test_user1
+2020-11-18 20:12:10,917 INFO [http-nio-8080-exec-2] c.e.d.c.UserController [UserController.java:56] user created: test_user2
+2020-11-18 20:12:15,104 INFO [http-nio-8080-exec-5] c.e.d.c.UserController [UserController.java:56] user created: test_user3
+2020-11-18 20:14:00,537 DEBUG [http-nio-8080-exec-4] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:206] Request is to process authentication
+2020-11-18 20:14:13,495 DEBUG [http-nio-8080-exec-1] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:206] Request is to process authentication
+2020-11-18 20:14:13,654 DEBUG [http-nio-8080-exec-1] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:345] Authentication request failed: org.springframework.security.authentication.BadCredentialsException: Bad credentials
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:93)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at com.example.demo.security.JWTAuthenticationFilter.attemptAuthentication(JWTAuthenticationFilter.java:39)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-11-18 20:14:13,669 DEBUG [http-nio-8080-exec-1] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:346] Updated SecurityContextHolder to contain null Authentication
+2020-11-18 20:14:13,670 DEBUG [http-nio-8080-exec-1] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:347] Delegating to authentication failure handler org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler@54ee2e4
+2020-11-18 20:14:48,122 DEBUG [http-nio-8080-exec-3] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:206] Request is to process authentication
+2020-11-18 20:15:11,747 INFO [http-nio-8080-exec-2] c.e.d.c.UserController [UserController.java:32] user found by id: 1
+2020-11-18 20:15:26,053 INFO [http-nio-8080-exec-5] c.e.d.c.UserController [UserController.java:32] user found by id: 3
