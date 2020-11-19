@@ -31,37 +31,44 @@ public class CartControllerTest {
     }
 
     @Test
+    public void addToBadUsersCart() {
+        ModifyCartRequest request = new ModifyCartRequest("nonexistentUser",1L,1);
+        ResponseEntity<Cart> cartResponseEntity = cartController.addToCart(request);
+        assertEquals(404, cartResponseEntity.getStatusCodeValue());
+    }
+
+    @Test
     public void addToCartTest(){
-        var userName = "testUser";
-        var goodPassword = "goodEnoughPass";
-        var stubUser = new User(userName,null,null,null,goodPassword,null,null);
+        String userName = "testUser";
+        String goodPassword = "goodEnoughPass";
+        User stubUser = new User(userName,null,null,null,goodPassword,null,null);
         stubUser.setCart(new Cart(new ArrayList<>(), BigDecimal.valueOf(100), stubUser));
-        var item = new Item("testItem",BigDecimal.valueOf(10));
-        var request = new ModifyCartRequest(userName,1L,1);
+        Item item = new Item("testItem",BigDecimal.valueOf(10));
+        ModifyCartRequest request = new ModifyCartRequest(userName,1L,1);
 
         when(userRepository.findByUsername(userName)).thenReturn(stubUser);
         when(itemRepository.findById(request.getItemId())).thenReturn(java.util.Optional.of(item));
 
         ResponseEntity<Cart> cartResponseEntity = cartController.addToCart(request);
-        var cart = cartResponseEntity.getBody();
+        Cart cart = cartResponseEntity.getBody();
 
         assertEquals(stubUser,cart.getUser());
     }
 
     @Test
     public void removeFromCart(){
-        var userName = "testUser";
-        var goodPassword = "goodEnoughPass";
-        var stubUser = new User(userName,null,null,null,goodPassword,null,null);
+        String userName = "testUser";
+        String goodPassword = "goodEnoughPass";
+        User stubUser = new User(userName,null,null,null,goodPassword,null,null);
         stubUser.setCart(new Cart(new ArrayList<>(), BigDecimal.valueOf(100), stubUser));
-        var item = new Item("testItem",BigDecimal.valueOf(10));
-        var request = new ModifyCartRequest(userName,1L,1);
+        Item item = new Item("testItem",BigDecimal.valueOf(10));
+        ModifyCartRequest request = new ModifyCartRequest(userName,1L,1);
 
         when(userRepository.findByUsername(userName)).thenReturn(stubUser);
         when(itemRepository.findById(request.getItemId())).thenReturn(java.util.Optional.of(item));
 
         ResponseEntity<Cart> cartResponseEntity = cartController.removeFromCart(request);
-        var cart = cartResponseEntity.getBody();
+        Cart cart = cartResponseEntity.getBody();
 
         assertEquals(stubUser,cart.getUser());
     }

@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
 import org.junit.*;
+
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import com.example.demo.TestUtils;
 import com.example.demo.model.Role;
@@ -12,8 +14,6 @@ import com.example.demo.service.RoleService;
 import com.example.demo.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 public class UserControllerTest {
     private static UserController userController;
@@ -37,8 +37,8 @@ public class UserControllerTest {
 
     @Test
     public void createUserHappyPath(){
-        var userName = "testUser";
-        var goodPassword = "goodEnoughPass";
+        String userName = "testUser";
+        String goodPassword = "goodEnoughPass";
 
         when(bCryptPasswordEncoder.encode(goodPassword)).thenReturn(goodPassword);
         when(roleService.findByName("USER")).thenReturn(new Role("USER"));
@@ -55,8 +55,8 @@ public class UserControllerTest {
 
     @Test
     public void findByUserNameHappyPath(){
-        var userName = "testUser";
-        var goodPassword = "goodEnoughPass";
+        String userName = "testUser";
+        String goodPassword = "goodEnoughPass";
         User stubUser = new User(userName,null,null,null,goodPassword,null,null);
 
         when(userRepository.findByUsername(userName)).thenReturn(stubUser);
@@ -69,8 +69,8 @@ public class UserControllerTest {
 
     @Test
     public void findByIdNameHappyPath(){
-        var userName = "testUser";
-        var goodPassword = "goodEnoughPass";
+        String userName = "testUser";
+        String goodPassword = "goodEnoughPass";
         User stubUser = new User(userName,null,null,null,goodPassword,null,null);
 
         when(userRepository.findById(1L)).thenReturn(java.util.Optional.of(stubUser));
@@ -79,5 +79,22 @@ public class UserControllerTest {
         User foundUser = userResponseEntity.getBody();
 
         assertEquals(userName,foundUser.getUsername());
+    }
+
+    @Test
+    public void createUserWithBadPassword(){
+        String userName = "testUser";
+        String badPassword = "badpwd";
+
+        when(bCryptPasswordEncoder.encode(badPassword)).thenReturn(badPassword);
+        when(roleService.findByName("USER")).thenReturn(new Role("USER"));
+
+        CreateUserRequest cUr = new CreateUserRequest(userName,badPassword,badPassword);
+        ResponseEntity<User> createUserResponse = userController.createUser(cUr);
+        User createdUser = createUserResponse.getBody();
+
+        assertNotNull(createUserResponse);
+        assertEquals(400,createUserResponse.getStatusCodeValue());
+        assertNull(createdUser);
     }
 }

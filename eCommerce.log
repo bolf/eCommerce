@@ -85,3 +85,18 @@ org.springframework.security.authentication.BadCredentialsException: Bad credent
 2020-11-18 20:14:48,122 DEBUG [http-nio-8080-exec-3] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:206] Request is to process authentication
 2020-11-18 20:15:11,747 INFO [http-nio-8080-exec-2] c.e.d.c.UserController [UserController.java:32] user found by id: 1
 2020-11-18 20:15:26,053 INFO [http-nio-8080-exec-5] c.e.d.c.UserController [UserController.java:32] user found by id: 3
+2020-11-19 10:30:56,985 ERROR [main] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:badpwd
+2020-11-19 10:33:07,456 ERROR [main] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:badpwd
+2020-11-19 11:46:39,904 ERROR [main] c.e.d.c.OrderController [OrderController.java:33] user not found: testUser
+2020-11-19 11:47:36,579 ERROR [main] c.e.d.c.OrderController [OrderController.java:33] user not found: testUser
+2020-11-19 19:30:45,804 INFO [main] c.e.d.c.OrderController [OrderController.java:38] submitted order for user: testUser
+2020-11-19 19:30:45,848 ERROR [main] c.e.d.c.OrderController [OrderController.java:33] user not found: testUser
+2020-11-19 19:30:45,854 INFO [main] c.e.d.c.OrderController [OrderController.java:49] got orders for user: testUser
+2020-11-19 19:30:59,164 INFO [main] c.e.d.c.UserController [UserController.java:32] user found by id: 1
+2020-11-19 19:30:59,224 INFO [main] c.e.d.c.UserController [UserController.java:43] user found by name: testUser
+2020-11-19 19:30:59,240 ERROR [main] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:badpwd
+2020-11-19 19:30:59,245 INFO [main] c.e.d.c.UserController [UserController.java:56] user created: testUser
+2020-11-19 19:31:13,454 INFO [main] c.e.d.ECommerceAppTests [StartupInfoLogger.java:50] Starting ECommerceAppTests on dbn with PID 1772 (started by blf in /media/blf/65D23EBD6F17EA05/IdeaWorkspace/javaWebDeveloper10_2020/Security_DevOps/P04-eCommerce Application)
+2020-11-19 19:31:13,456 DEBUG [main] c.e.d.ECommerceAppTests [StartupInfoLogger.java:53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2020-11-19 19:31:13,457 INFO [main] c.e.d.ECommerceAppTests [SpringApplication.java:675] No active profile set, falling back to default profiles: default
+2020-11-19 19:31:26,476 INFO [main] c.e.d.ECommerceAppTests [StartupInfoLogger.java:59] Started ECommerceAppTests in 13.76 seconds (JVM running for 16.915)

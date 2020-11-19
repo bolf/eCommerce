@@ -28,29 +28,37 @@ public class ItemControllerTest {
 
     @Test
     public void getItemsTest(){
-        var testName = "testItem";
+        String testName = "testItem";
         when(itemRepository.findAll()).thenReturn(Arrays.asList(new Item(testName, BigDecimal.valueOf(10))));
-        var listResponseEntity = itemController.getItems();
+        ResponseEntity<List<Item>> listResponseEntity = itemController.getItems();
         assertEquals(testName, listResponseEntity.getBody().get(0).getName());
     }
 
     @Test
     public void getItemsByName(){
-        var testName = "testItem";
-        var testItem = new Item(testName, BigDecimal.valueOf(10));
+        String testName = "testItem";
+        Item testItem = new Item(testName, BigDecimal.valueOf(10));
         when(itemRepository.findByName(testName)).thenReturn(Collections.singletonList(testItem));
-        var itemResponseEntity = itemController.getItemsByName(testName);
+        ResponseEntity<List<Item>> itemResponseEntity = itemController.getItemsByName(testName);
         assertEquals(testName,itemResponseEntity.getBody().get(0).getName());
     }
 
     @Test
+    public void getItemsByBadName(){
+        String testName = "badItemName";
+        when(itemRepository.findByName(testName)).thenReturn(null);
+        ResponseEntity<List<Item>> itemResponseEntity = itemController.getItemsByName(testName);
+        assertEquals(404,itemResponseEntity.getStatusCodeValue());
+    }
+
+    @Test
     public void getItemsById(){
-        var testName = "testItem";
-        var testId = 1L;
-        var testItem = new Item(testName, BigDecimal.valueOf(10));
+        String testName = "testItem";
+        Long testId = 1L;
+        Item testItem = new Item(testName, BigDecimal.valueOf(10));
         testItem.setId(testId);
         when(itemRepository.findById(testId)).thenReturn(java.util.Optional.of(testItem));
-        var itemResponseEntity = itemController.getItemById(testId);
-        assertEquals(java.util.Optional.of(testId),itemResponseEntity.getBody().getId());
+        ResponseEntity<Item> itemResponseEntity = itemController.getItemById(testId);
+        assertEquals(java.util.Optional.of(testId).get(),itemResponseEntity.getBody().getId());
     }
 }
