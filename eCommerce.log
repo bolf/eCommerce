@@ -100,3 +100,14 @@ org.springframework.security.authentication.BadCredentialsException: Bad credent
 2020-11-19 19:31:13,456 DEBUG [main] c.e.d.ECommerceAppTests [StartupInfoLogger.java:53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
 2020-11-19 19:31:13,457 INFO [main] c.e.d.ECommerceAppTests [SpringApplication.java:675] No active profile set, falling back to default profiles: default
 2020-11-19 19:31:26,476 INFO [main] c.e.d.ECommerceAppTests [StartupInfoLogger.java:59] Started ECommerceAppTests in 13.76 seconds (JVM running for 16.915)
+2020-11-19 20:35:03,581 INFO [main] c.e.d.ECommerceAppTests [StartupInfoLogger.java:50] Starting ECommerceAppTests on dbn with PID 3054 (started by blf in /media/blf/65D23EBD6F17EA05/IdeaWorkspace/javaWebDeveloper10_2020/Security_DevOps/P04-eCommerce Application)
+2020-11-19 20:35:03,583 DEBUG [main] c.e.d.ECommerceAppTests [StartupInfoLogger.java:53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2020-11-19 20:35:03,585 INFO [main] c.e.d.ECommerceAppTests [SpringApplication.java:675] No active profile set, falling back to default profiles: default
+2020-11-19 20:35:18,323 INFO [main] c.e.d.ECommerceAppTests [StartupInfoLogger.java:59] Started ECommerceAppTests in 15.352 seconds (JVM running for 18.044)
+2020-11-19 20:35:41,877 INFO [main] c.e.d.c.OrderController [OrderController.java:38] submitted order for user: testUser
+2020-11-19 20:35:41,935 ERROR [main] c.e.d.c.OrderController [OrderController.java:33] user not found: testUser
+2020-11-19 20:35:41,938 INFO [main] c.e.d.c.OrderController [OrderController.java:49] got orders for user: testUser
+2020-11-19 20:35:49,444 INFO [main] c.e.d.c.UserController [UserController.java:32] user found by id: 1
+2020-11-19 20:35:49,576 INFO [main] c.e.d.c.UserController [UserController.java:43] user found by name: testUser
+2020-11-19 20:35:49,587 ERROR [main] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:badpwd
+2020-11-19 20:35:49,599 INFO [main] c.e.d.c.UserController [UserController.java:56] user created: testUser
