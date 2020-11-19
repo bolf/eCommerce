@@ -111,3 +111,63 @@ org.springframework.security.authentication.BadCredentialsException: Bad credent
 2020-11-19 20:35:49,576 INFO [main] c.e.d.c.UserController [UserController.java:43] user found by name: testUser
 2020-11-19 20:35:49,587 ERROR [main] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:badpwd
 2020-11-19 20:35:49,599 INFO [main] c.e.d.c.UserController [UserController.java:56] user created: testUser
+2020-11-19 22:55:15,266 INFO [main] c.e.d.c.UserController [UserController.java:32] user found by id: 1
+2020-11-19 22:55:15,614 INFO [main] c.e.d.c.UserController [UserController.java:43] user found by name: testUser
+2020-11-19 22:55:15,642 ERROR [main] c.e.d.c.UserController [UserController.java:51] user was not created with bad password:badpwd
+2020-11-19 22:55:15,657 INFO [main] c.e.d.c.UserController [UserController.java:56] user created: testUser
+2020-11-19 22:57:38,278 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:50] Starting ECommerceApp on dbn with PID 7143 (started by blf in /media/blf/65D23EBD6F17EA05/IdeaWorkspace/javaWebDeveloper10_2020/Security_DevOps/P04-eCommerce Application)
+2020-11-19 22:57:38,280 DEBUG [main] c.e.d.ECommerceApp [StartupInfoLogger.java:53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2020-11-19 22:57:38,282 INFO [main] c.e.d.ECommerceApp [SpringApplication.java:675] No active profile set, falling back to default profiles: default
+2020-11-19 22:57:51,861 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:59] Started ECommerceApp in 15.157 seconds (JVM running for 17.269)
+2020-11-19 22:58:03,070 INFO [http-nio-8080-exec-2] c.e.d.c.UserController [UserController.java:56] user created: test_user3
+2020-11-19 23:01:50,997 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:50] Starting ECommerceApp on dbn with PID 7308 (started by blf in /media/blf/65D23EBD6F17EA05/IdeaWorkspace/javaWebDeveloper10_2020/Security_DevOps/P04-eCommerce Application)
+2020-11-19 23:01:50,999 DEBUG [main] c.e.d.ECommerceApp [StartupInfoLogger.java:53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2020-11-19 23:01:51,001 INFO [main] c.e.d.ECommerceApp [SpringApplication.java:675] No active profile set, falling back to default profiles: default
+2020-11-19 23:02:03,853 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:59] Started ECommerceApp in 14.335 seconds (JVM running for 16.261)
+2020-11-19 23:02:57,430 INFO [http-nio-8080-exec-1] c.e.d.c.UserController [UserController.java:56] user created: test_user3
+2020-11-19 23:10:26,055 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:50] Starting ECommerceApp on dbn with PID 7686 (started by blf in /media/blf/65D23EBD6F17EA05/IdeaWorkspace/javaWebDeveloper10_2020/Security_DevOps/P04-eCommerce Application)
+2020-11-19 23:10:26,080 DEBUG [main] c.e.d.ECommerceApp [StartupInfoLogger.java:53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2020-11-19 23:10:26,099 INFO [main] c.e.d.ECommerceApp [SpringApplication.java:675] No active profile set, falling back to default profiles: default
+2020-11-19 23:10:38,473 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:59] Started ECommerceApp in 13.69 seconds (JVM running for 15.163)
+2020-11-19 23:10:49,253 INFO [http-nio-8080-exec-3] c.e.d.c.UserController [UserController.java:57] user created: test_user3
+2020-11-19 23:10:51,514 ERROR [http-nio-8080-exec-4] c.e.d.c.UserController [UserController.java:60] user was not created: class org.springframework.dao.DataIntegrityViolationException : org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-19 23:10:56,434 ERROR [http-nio-8080-exec-2] c.e.d.c.UserController [UserController.java:60] user was not created: class org.springframework.dao.DataIntegrityViolationException : org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-19 23:11:32,489 INFO [http-nio-8080-exec-5] c.e.d.c.UserController [UserController.java:57] user created: test_user1
+2020-11-19 23:11:45,873 ERROR [http-nio-8080-exec-6] c.e.d.c.UserController [UserController.java:60] user was not created: class org.springframework.dao.DataIntegrityViolationException : org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-19 23:11:47,630 ERROR [http-nio-8080-exec-7] c.e.d.c.UserController [UserController.java:60] user was not created: class org.springframework.dao.DataIntegrityViolationException : org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-19 23:11:48,475 ERROR [http-nio-8080-exec-8] c.e.d.c.UserController [UserController.java:60] user was not created: class org.springframework.dao.DataIntegrityViolationException : org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-19 23:11:49,284 ERROR [http-nio-8080-exec-9] c.e.d.c.UserController [UserController.java:60] user was not created: class org.springframework.dao.DataIntegrityViolationException : org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-19 23:13:19,314 DEBUG [http-nio-8080-exec-5] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:206] Request is to process authentication
+2020-11-19 23:13:45,495 DEBUG [http-nio-8080-exec-6] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:206] Request is to process authentication
+2020-11-19 23:14:24,708 ERROR [http-nio-8080-exec-9] c.e.d.c.OrderController [OrderController.java:46] order not found for user: sdsd
+2020-11-19 23:14:26,602 ERROR [http-nio-8080-exec-10] c.e.d.c.OrderController [OrderController.java:46] order not found for user: sdsd
+2020-11-19 23:14:38,553 INFO [http-nio-8080-exec-1] c.e.d.c.OrderController [OrderController.java:49] got orders for user: test_user3
+2020-11-19 23:24:40,540 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:50] Starting ECommerceApp on dbn with PID 8045 (started by blf in /media/blf/65D23EBD6F17EA05/IdeaWorkspace/javaWebDeveloper10_2020/Security_DevOps/P04-eCommerce Application)
+2020-11-19 23:24:40,544 DEBUG [main] c.e.d.ECommerceApp [StartupInfoLogger.java:53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2020-11-19 23:24:40,546 INFO [main] c.e.d.ECommerceApp [SpringApplication.java:675] No active profile set, falling back to default profiles: default
+2020-11-19 23:24:56,840 INFO [main] c.e.d.ECommerceApp [StartupInfoLogger.java:59] Started ECommerceApp in 17.638 seconds (JVM running for 19.701)
+2020-11-19 23:28:13,818 INFO [http-nio-8080-exec-1] c.e.d.c.UserController [UserController.java:57] user created: test_user3
+2020-11-19 23:28:21,022 INFO [http-nio-8080-exec-3] c.e.d.c.UserController [UserController.java:57] user created: test
+2020-11-19 23:28:35,718 DEBUG [http-nio-8080-exec-4] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:206] Request is to process authentication
+2020-11-19 23:28:35,766 ERROR [http-nio-8080-exec-4] c.e.d.s.JWTAuthenticationFilter [JWTAuthenticationFilter.java:46] Authentication failed: 
+2020-11-19 23:28:43,662 DEBUG [http-nio-8080-exec-5] c.e.d.s.JWTAuthenticationFilter [AbstractAuthenticationProcessingFilter.java:206] Request is to process authentication
+2020-11-19 23:30:39,837 INFO [http-nio-8080-exec-8] c.e.d.c.CartController [CartController.java:51] item with 1 added to cart for test
+2020-11-19 23:30:48,833 INFO [http-nio-8080-exec-9] c.e.d.c.CartController [CartController.java:51] item with 1 added to cart for test
+2020-11-19 23:30:54,473 ERROR [http-nio-8080-exec-10] c.e.d.c.CartController [CartController.java:44] item with 15 not found for adding to cart
+2020-11-19 23:31:00,255 ERROR [http-nio-8080-exec-2] c.e.d.c.CartController [CartController.java:44] item with 15 not found for adding to cart
+2020-11-19 23:31:01,112 ERROR [http-nio-8080-exec-1] c.e.d.c.CartController [CartController.java:44] item with 15 not found for adding to cart
+2020-11-19 23:31:06,150 INFO [http-nio-8080-exec-3] c.e.d.c.CartController [CartController.java:51] item with 2 added to cart for test
+2020-11-19 23:31:33,930 ERROR [http-nio-8080-exec-4] c.e.d.c.OrderController [OrderController.java:33] user not found: sdasdasd
+2020-11-19 23:31:34,755 ERROR [http-nio-8080-exec-5] c.e.d.c.OrderController [OrderController.java:33] user not found: sdasdasd
+2020-11-19 23:31:35,668 ERROR [http-nio-8080-exec-6] c.e.d.c.OrderController [OrderController.java:33] user not found: sdasdasd
+2020-11-19 23:31:36,043 ERROR [http-nio-8080-exec-7] c.e.d.c.OrderController [OrderController.java:33] user not found: sdasdasd
+2020-11-19 23:31:36,596 ERROR [http-nio-8080-exec-8] c.e.d.c.OrderController [OrderController.java:33] user not found: sdasdasd
+2020-11-19 23:31:42,398 ERROR [http-nio-8080-exec-9] c.e.d.c.OrderController [OrderController.java:33] user not found: user
+2020-11-19 23:32:50,809 INFO [http-nio-8080-exec-1] c.e.d.c.OrderController [OrderController.java:38] submitted order for user: test
+2020-11-19 23:32:55,482 INFO [http-nio-8080-exec-3] c.e.d.c.OrderController [OrderController.java:38] submitted order for user: test
+2020-11-19 23:32:56,623 INFO [http-nio-8080-exec-4] c.e.d.c.OrderController [OrderController.java:38] submitted order for user: test
+2020-11-19 23:33:02,771 ERROR [http-nio-8080-exec-5] c.e.d.c.OrderController [OrderController.java:33] user not found: test88
+2020-11-19 23:35:12,175 ERROR [http-nio-8080-exec-9] c.e.d.c.OrderController [OrderController.java:46] order not found for user: user
+2020-11-19 23:35:21,635 INFO [http-nio-8080-exec-10] c.e.d.c.OrderController [OrderController.java:49] got orders for user: test
+2020-11-19 23:35:24,654 INFO [http-nio-8080-exec-2] c.e.d.c.OrderController [OrderController.java:49] got orders for user: test
+2020-11-19 23:35:28,309 ERROR [http-nio-8080-exec-1] c.e.d.c.OrderController [OrderController.java:46] order not found for user: tes456

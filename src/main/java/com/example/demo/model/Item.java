@@ -26,6 +26,8 @@ public class Item extends BaseModel {
 	@JsonProperty
 	private String description;
 
+	public Item(){}
+
 	public Item(String name, BigDecimal price) {
 		this.name = name;
 		this.price = price;

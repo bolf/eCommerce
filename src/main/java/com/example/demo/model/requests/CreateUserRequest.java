@@ -13,6 +13,8 @@ public class CreateUserRequest {
 	@JsonProperty
 	private String confirmPassword;
 
+	public CreateUserRequest(){}
+
 	public CreateUserRequest(String username, String password, String confirmPassword) {
 		this.username = username;
 		this.password = password;

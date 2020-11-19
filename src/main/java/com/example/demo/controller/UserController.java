@@ -52,9 +52,14 @@ public class UserController {
 			return ResponseEntity.badRequest().build();
 		}
 		User user = new User(createUserRequest.getUsername(),createUserRequest.getPassword());
-		userService.registerUser(user);
-		log.info("user created: ".concat(createUserRequest.getUsername()));
-		return ResponseEntity.ok(user);
+		try {
+			userService.registerUser(user);
+			log.info("user created: ".concat(createUserRequest.getUsername()));
+			return ResponseEntity.ok(user);
+		}catch (Exception e){
+			log.error("user was not created: " + e.getClass() + " : " + e.getCause());
+			return ResponseEntity.unprocessableEntity().build();
+		}
 	}
 	
 }

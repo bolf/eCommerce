@@ -10,6 +10,8 @@ public class ModifyCartRequest {
 	@JsonProperty
 	private int quantity;
 
+	ModifyCartRequest(){}
+
 	public ModifyCartRequest(String username, long itemId, int quantity) {
 		this.username = username;
 		this.itemId = itemId;
